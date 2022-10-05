@@ -1,0 +1,30 @@
+h1{
+    color: red;
+}
+h2{
+    color: blue;
+}
+.alumnos{
+    color: yellow;
+}
+
+.ejercicio{
+    border: 2px solid blueviolet;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+
+}
+.alum{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+th,td{
+    border: 1px solid blueviolet;
+
+}
+th{
+    font-weight: bold;
+}
