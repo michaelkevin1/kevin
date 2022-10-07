@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(./practica/messi.jpg);
+    background-image: url(./src/messi.jpg);
     background-size: cover;
     background-position: center;
     color: white;
