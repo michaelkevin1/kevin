@@ -1,0 +1,18 @@
+.gradiente-uno{
+    height: 300px;
+    height: 300px;
+    background: linear-gradient(
+        360deg,
+        rgb(252,95,74),
+        rgb(0,132,255),
+        black,
+        green
+    );
+    color: #fff;
+}
+.gradiente-dos{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right bottom, red,
+    black, green,blue);
+}
