@@ -62,3 +62,163 @@
     margin-left: 20px;
    border-radius: 8px;
 }
+
+/* SECTION SERVICIOS */
+.servicios h2{
+    color: #D206B2;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+}
+.servicios p{
+    margin:30px
+}
+
+.servicios div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+.servicios div img{
+    margin-left: 20px;
+   border-radius: 8px;
+}
+/* LISTA DE SERVICIOS */
+
+.ulservicio{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 44px;
+}
+.ulservicio .uno{
+    color: #FF0000 ;
+}
+.ulservicio .dos{
+    color: #1400FF ;
+}
+.ulservicio .tres{
+    color: #D79B00 ;
+}
+.ulservicio .cuatro{
+    color: #03B2B2 ;
+}
+
+/* SECTION PORTAFOLIO */
+
+.portafolio h2{
+    color: #AAD206;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27.6px;
+}
+.portafolio p{
+    margin:30px
+}
+
+.portafolio div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+.portafolio div img{
+    margin-left: 20px;
+   border-radius: 8px;
+}
+    
+/* PORTAFOLIO SERVICIOS */
+
+.portservicio{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 44px;
+}
+.portservicio .puno{
+    color: #AE8800 ;
+}
+.portservicio .pdos{
+    color: #AE280B ;
+}
+.portservicio .ptres{
+    color: #060564 ;
+}
+.portservicio .pcuatro{
+    color: #637300 ;
+}
+
+/* SECTION Contacto */
+
+.contacto h2{
+    color: #06D2C6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27.6px;
+    
+}
+.contacto p{
+    margin:30px
+}
+
+.caja {
+    width: 1339px;
+    height: 88px;
+    left: 38px;
+    top: 2195px;
+}
+.detalle {
+    box-sizing: border-box;
+    width: 1339px;
+    height: 214px;
+    left: 38px;
+    top: 2323px;
+    border: 1px solid #000000;
+}
+.boton {
+    box-sizing: border-box;
+    width: 195px;
+    height: 73px;
+    left: 40px;
+    top: 2574px;
+    border: 1px solid #22A900;
+}
+
+/* footer */
+
+.contacto h2{
+    color: #06D2C6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27.6px;
+    
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    height: 103px;
+    background-color: #00AF1C;
+    margin-top: 20px;
+    align-items: center;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+footer .p1 {
+    margin-left: 10px;
+    
+}
+footer .p2 {
+    margin-right: 10px;
+}
