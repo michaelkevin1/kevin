@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: blue;
+}
+.section-principal{
+    display: flex;
+}
+.section-principal div{
+    width: 200px;
+    height: 200px;
+    border: solid;
+}
+.box-one{
+    background-color: yellow;
+}
+.box-two{
+    background-color: red;
+}
+.box.three{
+    background-color: aqua;
+}
+/* dentro de los elemntos tenemos 3 medidas standar 1200 a 1900 px es 
+el tamanño  destoct de 900 a 700 px es de tablet 600 a 480 es pata mobil*/
+
+@media only screen and(max-width: 480px){
+    body{
+        background-color: blueviolet;
+    }
+    .section-principal div{
+        width: 200px;
+        height: 200px;
+        border: solid;
+    }
+
+    .box.three{
+        background-color: brown;
+    }
+    .box-one{
+        background-color: black;
+    }
+}
