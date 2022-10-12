@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 200px 100px 300px;
+    
+    grid-template-rows: 100px;
+
+
+}
+.container div{
+    background-color: aquamarine;
+    padding: 1rem;
+}
+.container div:hover{
+    border: 10px solid yellow;
+}
+
+.item1{
+	grid-column: 1 / 4;
+}
