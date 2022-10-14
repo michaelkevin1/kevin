@@ -1,0 +1,45 @@
+*,html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: rgb(134, 201,252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.button{
+    padding:  8px 25px;
+    color: #fff;
+    background-color: rgb(243, 97, 61);
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-weight: 600;
+    
+}
+.button:hover{
+    transform: scale(1.1);
+}
+.button:active{
+    transform: translateY(4px);
+}
+.add-button{
+    margin-right: 10px;
+    background-color: rgb(13, 165, 20);
+
+}
+
+.add-button:hover{
+    background-color:rgb(23, 63, 23);
+}
+.delete-button{
+    background-color: rgb(192, 27, 27);
+
+}
+.delete-button:hover{
+    background-color:red;
+}

@@ -1,27 +1,24 @@
 /* SECTION header */
 *{
-    box-sizing: border-box;
-    margin: 0;
+   margin: 0;
+   box-sizing: border-box;
+
 
 }
 html{
-    font-family: Arial;
+    font-family: 'Oswald', sans-serif;
     font-size: 62.5%;
     color: white;
 }
-h1{
-    font-size: 6.4rem;
-    font-weight: 700;
-    
-}
+
 h2{
     font-size: 3.6rem;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 3rem;
     text-align: center;
 }
 p{
-    font-size: 1.4rem;
+    font-size: 2rem;
     line-height: 2.4rem;
     margin-bottom: 20px;
 }
@@ -31,7 +28,7 @@ p{
 }
 .cabecera{
     position: relative;
-    border: solid;
+
 }
 .cabecera h1 ,.cabecera h2{
     position: absolute;
@@ -46,11 +43,12 @@ p{
 .cabecera h2{
     bottom: 30%;
     left: 10%;
-    line-height: 2.2rem;
-    margin-bottom: 0;
-    text-align: left;
+    text-align: 4.2rem;
+    padding: 20px;
     border-radius: 10px;
-    background-color: #7299FE;
+    text-align: left;
+    background-color: #7299fe80;
+
 }
 .cabecera figure img{
     display: block;
@@ -64,17 +62,9 @@ p{
     padding: 30px 40px 70px 40px;
     background-color: #7299FE;
 }
-.sobre-mi h2{
-    color:#1D06A7;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
 
-.sobre-mi p{
-    color: #fff;
-    margin-bottom: 20px;
-}
+
+
 .sobre-mi button{
     height: 62px;
     width: 187px;
@@ -83,7 +73,10 @@ p{
     border-radius: 25px;
     background-color: #D16FFF;
     border: none;
-    box-shadow: 0px 4px 4px 0px #D16FFF;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0px 4px 20px 0px #D16FFF;
 }
 
 /* Skills */
@@ -126,6 +119,8 @@ p{
     background-color: #57EFF9;
 }
 
+/* Portafolio */
+
 .portafolio{
     padding: 40px 140px 80px 140px;
     background-color: #FFD233;
@@ -144,6 +139,8 @@ p{
     margin-bottom: 10px;
 }
 
+/* Clientes */
+
 .clientes{
     padding: 30px 50px 100px 50px;
     background-color: #3F4E62;
@@ -160,6 +157,8 @@ p{
 .clientes_container_img figure{
     margin-right: 10px;
 }
+
+/* Contacto */
 
 .contacto{
     padding: 30px 60px 70px 60px;
