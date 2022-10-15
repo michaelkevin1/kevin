@@ -140,37 +140,53 @@
     height: 100%;
 }
 
-/* Footer */
+
+
+
 
 a{
     color: #fff;
 }
 
 .footer{
-    border: solid;
     background: hsl(192, 100%, 9%);
-    padding: 100px 100px;
     color: #fff;
+    padding: 90px 80px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-logo{
-    background-color: #fff;
-    display: inline-block;
-    margin-top: -80px;
+    width: 15%;
+    filter:sepia(50)  brightness(50);
+    margin-top: 50px;
 }
 .section-footer{
+    display: grid;
+    grid-template-columns: 50% 20% 20% 20%;
+    grid-template-rows: repeat(3,auto);
+    margin-top: 30px;
+}
+
+.section-footer p{
+    margin-bottom: 10px;
+    margin-left: 5px;
     border: solid;
+    margin-right: 0rem;
     display: flex;
     
 }
-.text-footer{
-    padding-left: 20px;
+
+.section-footer img{
+    margin-right: 15px;
+    height: 4vh;
+    height: 4ch;
+}
+.pone{
+    margin-right: 80px;
 }
 
-.location{
-margin:20px 3px 0px 0px;
-border: solid;
-}
+
+
 
 .f-1{
     border: solid;
@@ -187,6 +203,98 @@ border: solid;
 .f-4{
     border: solid;
 }
+
+
+
+/* Footer 
+
+footer {
+    background: hsl(192, 100%, 9%);
+    color: #fff;
+    padding: 90px 80px;
+    font-family: 'Open Sans', sans-serif;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    grid-template-rows: repeat(3,auto);
+    margin-top: 30px;
+
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.footer-content a {
+    margin-bottom: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    
+}
+
+.texts-icons .icon-p {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    font-size: 17px;
+}
+
+.redes {
+    display: flex;
+}
+
+.redes a {
+    margin-left: 20px;
+}
+
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+
+}
+
+.footer-logo {
+    width: 15%;
+    filter:sepia(50)  brightness(50);
+    margin-top: 50px;
+}
+
+.box-content {
+    margin-top: 100px;
+    display: block;
+}
+
+.floatbox {
+    position: absolute;
+    background: #fff;
+    color: black;
+    padding: 30px 50px 30px 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 5px 1px #ccc;
+    font-family: 'Open Sans', sans-serif;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 35%;
+}
+
+.floatbox button {
+    padding: 20px 45px 20px 45px;
+    border-radius: 50px;
+    margin-top: 30px;
+    background-color: hsl(322, 100%, 66%);
+    border: none;
+    color: #FFF;
+    font-weight: bold;
+    box-shadow: 0 3px 15px 4px #d3d3d3;
+}
+
+*/
 
 
 
