@@ -82,7 +82,9 @@ a{
     font-weight: bold;
 }
 .img-profile{
-    border-radius: 50%;
+    border-radius: 40%;
+    width: 60%;
+
 }
 
 /*Section works*/
@@ -122,8 +124,8 @@ a{
     box-shadow: 0 25px 30px rgb(10, 77, 77);
     
 }
-
 .conteiner-detail{
     padding: 3%;
 }
+
 
