@@ -1,20 +1,27 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #477BA5;
+    font-family: 'Public Sans', sans-serif;
+    background-color: #141618;
+    color: white;
 
 }
 
 .header{
-    
     top: 0;
     width: 100%;
+    padding-right: 45%;
     display: flex;
     justify-content: flex-end;
     position: fixed;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #030303;
+    font-weight: 600;
+    font-size: 1.2em;
 }
 .nav ul{
     display: flex;
@@ -30,9 +37,13 @@ a{
     text-decoration: none;
 }
 .banner{
-    margin: 50px 10px 20px 10px; 
+    margin: 6em 10px 20px 10px;
+    padding-bottom: 3.5em; 
     display: flex;
     justify-content: space-around;
+    color: #fff;
+    background-color: #0b0c0c;;
+    border-radius: 0 0 30px 30px;
 }
 .title{
     font-size: 2em;
@@ -44,14 +55,15 @@ a{
 }
 .btn-primary{
     width: 200px;
-    background-color: #ff6464;
-    color: white;
+    background-color: #ffffff;
+    color: black;
     border: none;
     padding: 15px;
     border-radius: 8px;
+    font-weight: 750;
     cursor: pointer;
     font-size: 1rem;
-    box-shadow: 0 15px 25px red;
+    box-shadow: 0 15px 25px rgb(10, 77, 77);
     animation-name: boton-volador;
     animation-duration: 5s;
     animation-iteration-count: 1;
@@ -65,18 +77,31 @@ a{
     }
 }
 .btn-primary:hover{
-    background-color: green;
+    background-color: rgb(103, 207, 103);
     color: black;
     font-weight: bold;
 }
 .img-profile{
     border-radius: 50%;
 }
+
+/*Section works*/
+
 .title-section{
-    margin-left: 20rem;
+    display: flex;
+    justify-content: center; 
+    padding-top: 5%;
+}
+
+.section-works{
+  
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .card{
-    margin-top: 3rem;
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
 }
@@ -84,13 +109,21 @@ a{
     margin-left: 30px;
 }
 
+
 .card div img{
     width: 20rem;
     height: 180px;
-    border-radius: 8px;
-    box-shadow: 0 15px 25px ;
+    border-radius: 10px;
+    box-shadow: 0 1px 30px ;
+    color:  rgb(218, 147, 147);
+    
 }
 .card div img:hover{
-    box-shadow: 0 25px 30px red;
+    box-shadow: 0 25px 30px rgb(10, 77, 77);
+    
+}
+
+.conteiner-detail{
+    padding: 3%;
 }
 
