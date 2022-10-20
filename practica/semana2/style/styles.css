@@ -7,58 +7,63 @@ body{
     font-family: 'Public Sans', sans-serif;
     background-color: #141618;
     color: white;
-
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
-
 .header{
     top: 0;
     width: 100%;
-    padding-right: 45%;
-    display: flex;
-    justify-content: flex-end;
     position: fixed;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 1rem 0px;
     background-color: #030303;
     font-weight: 600;
     font-size: 1.2em;
 }
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .nav ul{
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
 }
 .nav ul li{
     padding: 15px;
 }
-a{
-    color: white;
-}
 .nav ul li a{
     text-decoration: none;
+    color: #fff;
 }
 .banner{
-    margin: 6em 10px 20px 10px;
+    margin-top: 6rem;
     padding-bottom: 3.5em; 
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     color: #fff;
     background-color: #0b0c0c;;
     border-radius: 0 0 30px 30px;
+}
+.banner div h1{
+    padding-top: 2.5rem;
 }
 .title{
     font-size: 2em;
 }
 .resume{
     width: 45%;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 25px;
 }
 .btn-primary{
     width: 200px;
     background-color: #ffffff;
     color: black;
     border: none;
-    padding: 15px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
     border-radius: 8px;
     font-weight: 750;
     cursor: pointer;
@@ -82,9 +87,14 @@ a{
     font-weight: bold;
 }
 .img-profile{
-    border-radius: 40%;
-    width: 60%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-profile img{
+    border-radius: 35%;
+    width: 47vh;
+    padding-top: 2.5rem;
 }
 
 /*Section works*/
@@ -94,38 +104,35 @@ a{
     justify-content: center; 
     padding-top: 5%;
 }
-
 .section-works{
-  
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 .card{
     margin-top: 5rem;
-    display: flex;
+    margin-left: 1rem;
     justify-content: center;
+    align-items: center;
 }
 .card div{
-    margin-left: 30px;
+    justify-content: center; 
 }
-
-
 .card div img{
-    width: 20rem;
+    width: 100%;
     height: 180px;
     border-radius: 10px;
     box-shadow: 0 1px 30px ;
-    color:  rgb(218, 147, 147);
-    
+    color:  rgb(218, 147, 147);   
 }
 .card div img:hover{
     box-shadow: 0 25px 30px rgb(10, 77, 77);
-    
 }
 .conteiner-detail{
-    padding: 3%;
+    padding: 0.5rem;
 }
 
 
