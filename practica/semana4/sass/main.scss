@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+
+
+body{
+    background-color:$color-principal;
+}
+
+.cuadrado{
+    width: 300x;
+    height: 300px;
+    background-color: $color-red;
+}
+
+
+.success{
+    @include alertita($color-red);
+}
+
+.info{
+    @include alertita ;
+}
+
+
+@mixin generate-icons($name,$icon,$color,$size) {
+    .div-icon-#{$name}{
+        background: url("https://i.postimg.cc/WzG9XJD9/telefono.jpg")
+    }
+    
+}
+
+
+
+@include generate-icons("phone","telefono.jpg",rgb(252,135,143),400px) {
+    
+    
+}
