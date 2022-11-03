@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+main{
+    background:url(https://img.freepik.com/free-vector/desert-landscape-with-road-night_107791-10148.jpg?w=996&t=st=1666841904~exp=1666842504~hmac=b21ec75356a81269048a12c728f6ad0bb65724cfb9cad3c9d4d5956625a381ff);
+    width: 100vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.container h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+
+}
+
+.btn{
+    height: 3rem;
+    width: 11rem;
+    background-color: rgb(231, 57, 86);
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 2rem;
+
+}
+span{
+    background-color: rgb(228, 183, 183);
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 3rem;
+    
+}
