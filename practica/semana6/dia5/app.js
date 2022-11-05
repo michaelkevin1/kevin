@@ -1,114 +1,63 @@
-//  QUE ES UN API .. 
-// ESUN SERVICIO EL CUAL PEUDE PROVEER INFORMACION PUEE CREARLA
+const formulario = document.getElementById('formulario');
+const input = document.getElementById('input');
+const tareaslist = document.getElementById('lista-tareas');
+const template = document.getElementById('template').content;
+const fragmento = document.createDocumentFragment();
 
-//EN JS ESXISTE UNA FUNCION LA CUAL SE ENCARGA DE PODER HACER LA PETRICION
+let tareas = {};
 
-//FEtCH ()
-//GET= OBTENER INFORMACION
-//POST = CREAR DATOS
-//PUT = ACTULIZA DATOS
-//DELETE = ELIMINAR DATOS
-// FUNCION ASYNC
-
-//las funciones async fueron creadas para ejecutar algo en caso que la ejecuancion demore mas tiempo de los esparado para popder pasar a ala siguente funcion..
-
-//https://api.github.com/users/michaelkevin1
-//hay un tiempo de espera no sabemos cuanto puede tardar
-//peticion.. no esta bien esctructurada nunca retornara nada.
-
-
-const imgProfile = document.querySelector("#img-profile");
-const githubName = document.querySelector("#github-name");
-const githubUserName = document.querySelector("#github-username");
-const githubBio = document.querySelector("#github-bio");
-const githubJoined = document.querySelector("#github-joined");
-const githubRepos = document.querySelector("#github-repos");
-const githubFollowers = document.querySelector("#github-followers");
-const githubFollowing = document.querySelector("#github-following");
-const githubTwitter = document.querySelector("#github-twitter");
-const githubLocation = document.querySelector("#github-location")
-
-
-const githubActionSearch = document.querySelector("#github-action-search");
-const gitgubInputSearch = document.querySelector("#github-search");
-
-
-
-githubActionSearch.onclick = ()=>{
-    const username = gitgubInputSearch.value;
-    gitgubInputSearch.value = "";
-    //aca nos falta validar si el input esrta vacio
-    if(username ===""){
-        Swal.fire({
-            title: "error",
-            text: "debes llenar el campo usuario",
-            icon: "error"
-        });
-        return;
-    }
-    obetenerDatosgithub(username);
-}; 
-
-
-gitgubInputSearch.addEventListener("keyup", function(event){
-    if(event.key ==="Enter"){
-        obetenerDatosgithub(event.target.value)
-    }
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    setTarea();
 });
 
-
-const obetenerDatosgithub = async(username = "michaelkevin1")=>{
-    const response = await fetch(`https://api.github.com/users/${username}`);
-    
-    const data = await response.json();
-
-    if(data.message === "not found"){
-        Swal.fire({
-            title: "error",
-            text: "No se econtro el usuario",
-            icon: "error",
-        });
-        return;
+const setTarea = () => {
+    if(input.value.trim() === ''){
+        return/*Al poner el return hacemos que al ingresar al if se deje de producir toda la funcion*/
     }
-    serDataUser(data);
-    
-}
+    const tarea = {
+        id:Date.now(),
+        texto:input.value, 
+        estado: false
+    };
+    tareas[tarea.id]=tarea;/*push objeto identificador a la lista de objetos lo cual va a ser igual a el objeto*/ /* objetos = {1: {nombre: "Item1"}, 2: {nombre: "Item2"}, 3: {nombre: "Item3"}}*/
+    formulario.reset();
+    input.focus();
+    pintarTareas();
+};
 
-const formatDate = (fecha)=>{
-    let date = new Date(fecha);
-    return date.toISOString().split("T")[0];
-}
+const pintarTareas = () => {
+    tareaslist.innerHTML = ''; /*Para vaciar toda la lista y crear los objetos denuevo ya que le aplicamos foreach a la conexicon de obejtos*/
+    Object.values(tareas).forEach(tarea => {   /*Object.values(tareas) = el valor de cada objeto que en ecuentra en la colleccion de obejetos"tareas"*/
+        const clone = template.cloneNode(true);
+        clone.querySelector('p').textContent = tarea.texto;
+        if(tarea.estado){
+            clone.querySelector('.alert').classList.replace('alert-warning','alert-primary');
+            clone.querySelectorAll('.fas')[0].classList.replace('fa-check-circle','fa-undo-alt');
+            clone.querySelector('p').style.textDecoration = 'line-through'
+        };
+        clone.querySelectorAll('.fas')[0].dataset.id = tarea.id;
+        clone.querySelectorAll('.fas')[1].dataset.id = tarea.id
+        fragmento.appendChild(clone);
+        tareaslist.appendChild(fragmento); 
+    });
+};
 
+tareaslist.addEventListener('click', (e) => { /*El "E" es para sederle al accion a cada elemento hijo del contenedor que tiene el eventlistener (e) toogle, se aplicara el toggle cada vez que le demos click a un elemento del contenedor con el eventlistener*/
+    action(e);
+});
 
-const serDataUser = (data)=>{
-    imgProfile.src = data.avatar_url;
-    githubName.innerHTML = data.name;
-    githubBio.innerHTML = data.bio;
-    githubUserName.innerHTML = `@${data.login}`;
-    githubJoined.innerHTML = formatDate(data.created_at);
-    githubRepos.innerHTML = data.public_repos;
-    githubFollowers.innerHTML = data.followers;
-    githubFollowing.innerHTML = data.following;
-    githubLocation.innerHTML = data.location;
-    githubTwitter.innerHTML = data.twitter_username;
-}
-
-obetenerDatosgithub();
-
-
-
-
-
-// const obtenerDatosGithub = async()=>{
-    //como ejemploawait esta haciendo lo siguente
-    //ejecuta fectch con la url y una ves que sabe la ejecucion fetch recien ara el console.log
-//     const response = await fetch("https://api.github.com/users/michaelkevin1");
-   // es decir que hasta que la ejecucion no termine no mostrara la siguente linea
-//     const data = await response.json();
-//     imgProfile.src = data.avatar_url;
-//     console .log(data)
-
-// }
-
-// obtenerDatosGithub();
-
+const action = e => {
+    if(e.target.classList.contains('fa-check-circle')){
+        tareas[e.target.dataset.id].estado = true;
+        pintarTareas();
+    } else if(e.target.classList.contains('fa-minus-circle')){
+        delete tareas[e.target.dataset.id];
+        pintarTareas();
+    };
+    if(e.target.classList.contains('fa-undo-alt')){
+        tareas[e.target.dataset.id].estado = false;
+        pintarTareas();
+    };
+    e.stopPropagation;
+};
